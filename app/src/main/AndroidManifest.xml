@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.maintenance.maintenanceapps">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_maintenance_ungu"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_maintenance_ungu"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name=".Service.MyService"
+            android:enabled="true"
+            android:exported="true"
+            android:stopWithTask="false" ></service>
+
+        <activity android:name=".DetailCapture" />
+        <activity android:name=".AgendaSubMaintenance" />
+        <activity android:name=".SaveMaintenance" />
+        <activity android:name=".ProsesMaintenace" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".AgendaMaintance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Notifikasi" />
+        <activity android:name=".QRCode" />
+    </application>
+
+</manifest>
